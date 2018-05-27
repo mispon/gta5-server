@@ -1,0 +1,80 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript" src="../validation.js"></script>
+</head>
+<body>
+    <form>
+        <h1>Создание персонажа</h1>
+        <div class="name-block">
+            <p>Имя</p>
+            <input id="name" class="text-input" type="text" placeholder="John">
+            <p>Фамилия</p>
+            <input id="surname" class="text-input" type="text" placeholder="Smidth">
+            <p class="error"></p>
+        </div>
+        <div class="ranges-block">
+            <div class="sex">
+                <p>Пол</p>
+                <div>                    
+                    <input type="radio" id="male" name="radio" checked="checked" />                    
+                    <label for="male"><span></span>Мужской</label>
+                </div>                
+                <div>
+                    <input type="radio" id="female" name="radio" />
+                    <label for="female"><span></span>Женский</label>
+                </div>
+            </div>
+            <div>
+                <p>Внешность отца</p>                 
+                <i class="arrow-left fas fa-angle-left" style="top: 274px" data-id="fatherFace"></i>
+                <input id="fatherFace" class="range-slider" type="range" value="0" step="1" min="0" max="23">
+                <i class="arrow-right fas fa-angle-right" style="top: 274px" data-id="fatherFace"></i>
+            </div>
+            <div>
+                <p>Внешность матери</p>
+                <i class="arrow-left fas fa-angle-left" style="top: 320px" data-id="motherFace"></i>
+                <input id="motherFace" class="range-slider" type="range" value="0" step="1" min="0" max="21">
+                <i class="arrow-right fas fa-angle-right" style="top: 320px" data-id="motherFace"></i>
+            </div>
+            <div>
+                <p><small class="m-shape">мать</small>Цвет кожи<small class="f-shape">отец</small></p>
+                <i class="arrow-left fas fa-angle-left" style="top: 366px" data-id="skinMix"></i>
+                <input id="skinMix" class="range-slider" type="range" value="0.5" step="0.1" min="0.0" max="1.0">
+                <i class="arrow-right fas fa-angle-right" style="top: 366px" data-id="skinMix"></i>
+            </div>
+            <div>
+                <p><small class="m-shape">мать</small>Гены<small class="f-shape">отец</small></p>
+                <i class="arrow-left fas fa-angle-left" style="top: 412px" data-id="shapeMix"></i>
+                <input id="shapeMix" class="range-slider" type="range" value="0.5" step="0.1" min="0.0" max="1.0">
+                <i class="arrow-right fas fa-angle-right" style="top: 412px" data-id="shapeMix"></i>
+            </div>
+            <div>
+                <p>Прическа</p>
+                <i class="arrow-left fas fa-angle-left" style="top: 458px" data-id="hairStyle"></i>
+                <input id="hairStyle" class="range-slider" type="range" value="0" step="1" min="0" max="36">
+                <i class="arrow-right fas fa-angle-right" style="top: 458px" data-id="hairStyle"></i>
+            </div>
+            <div>
+                <p>Цвет волос</p>
+                <i class="arrow-left fas fa-angle-left" style="top: 504px" data-id="hairColor"></i>
+                <input id="hairColor" class="range-slider" type="range" value="0" step="1" min="0" max="30">
+                <i class="arrow-right fas fa-angle-right" style="top: 504px" data-id="hairColor"></i>
+            </div>
+            <div>
+                <p>Цвет глаз</p>
+                <i class="arrow-left fas fa-angle-left" style="top: 550px" data-id="eyesColor"></i>
+                <input id="eyesColor" class="range-slider" type="range" value="0" step="1" min="0" max="24">
+                <i class="arrow-right fas fa-angle-right" style="top: 550px" data-id="eyesColor"></i>
+            </div>
+        </div>
+        <button id="create-btn" onclick="saveChar(event)">Создать</button>
+    </form>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="../input-corrector.js"></script>
+</body>
+</html>
+    

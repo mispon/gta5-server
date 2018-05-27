@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="../../jquery.js"></script>
+    <script type="text/javascript" src="index.js" defer></script>
+</head>
+<body>
+    <div class="phone">
+        <div class="contacts-display">
+            <ul class="contacts">
+                <p class="no-contacts">Список пуст</p>
+                <!-- <li>
+                    <div class="contact-info" data-name="Такси" data-number="8008080">
+                        <p class="name">Такси</p>
+                        <small class="number">8008080</small>
+                    </div>
+                    <div class="contact-btns">
+                        <i class="fas fa-phone call" onClick="makeCall()" ></i>
+                    </div>
+                </li> -->
+            </ul>
+            <div class="new-contact-form">
+                <input class="name-input" type="text" placeholder="Имя" />
+                <input class="number-input" type="number" placeholder="Номер" />
+                <i class="fas fa-check-circle add-new-contact"></i>
+            </div>
+        </div>
+        <div class="call-display">
+            <p class="callee"></p>
+            <p class="callee-number"></p>
+            <i class="fas fa-phone-square end-call"></i>            
+        </div>
+        <div class="inc-call-display">
+            <p class="caller"></p>
+            <p class="caller-number"></p>
+            <i class="fas fa-phone-square accept-call"></i>
+            <i class="fas fa-phone-square decline-call"></i>            
+        </div>        
+        <div class="new-contact">
+            <i class="fas fa-plus"></i>
+        </div>    
+        <div class="back">
+            <i class="fas fa-chevron-circle-left"></i>
+        </div>
+    </div>
+</body>
+</html>

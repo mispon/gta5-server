@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" href="styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
+        <script type="text/javascript" src="../../jquery.js"></script>
+    </head>
+    <body>
+       <form>
+            <div class="header">
+                <button onclick="showInfo(event)">Информация</button>
+                <button onclick="showHotKeys(event)">Горячие клавиши</button>
+                <button onclick="showSocial(event)">Соц. сети</button>
+                <button onclick="showDonate(event)">Поддержка</button>
+                <div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>
+            </div>
+            <div id="info" class="tab-content">
+                <div class="help-info">
+                    <p>Основные характеристики:</p>
+                    <table>
+                        <tr>
+                            <td class="props">Деньги</td>
+                            <td class="props-desc">
+                                основной ресурс. За деньги вы можете приобрести любой товар и услугу на сервере.
+                                Например, купить еду, одежду или арендовать дом.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="props">Опыт</td>
+                            <td class="props-desc">
+                                дается во время работы. Он необходим для получения уровня. С увеличением уровня,
+                                открываются новые возможности, например, получение водительской лицензии или новые работы.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="props">Рабочий опыт</td>
+                            <td class="props-desc">
+                                накапливается во время определенной работы. С увеличением рабочего опыта, вы получаете большую
+                                зарплату и личный опыт. Каждая работа имеет 5 уровней.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="props">Сытость</td>
+                            <td class="props-desc">
+                                зависит от вашей активности. Чем больше вы перемещаетесь, тем быстрее она расходуется.
+                                Чтобы пополнить сытость, можно купить еды в магазине или на заправке. При полном израсходовании запаса
+                                сытости уменьшается уровень здоровья из-за голода.
+                            </td>
+                        </tr>
+                    </table>
+                    <p>Имущество:</p>
+                    <table>
+                        <tr>
+                            <td class="props">Дома</td>
+                            <td class="props-desc">
+                                арендуются на определенный срок. Вы можете арендовывать любое количество домов. Каждый дом поблизости имеет 
+                                гараж с количеством мест, в зависимости от типа дома. Находясь в доме, вы восстанавляваете хп.
+                                В гардеробе можно сменить ранее купленную одежду. Хранилище в разработке.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="props">Транспорт</td>
+                            <td class="props-desc">
+                                можно приобрести в одном из двух автосолонов - премиум или эконом класса. После покупки, он
+                                станет доступен на главной городской парковке или в гараже вашего дома. Заправить бензин можно на одной
+                                из заправок, которые отмечены на большой карте.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="props">Одежда</td>
+                            <td class="props-desc">
+                                продается в одном из двух типов магазинов - SubUrban(дешевая) и Ponsonboys(дорогая). После покупки, она сразу же 
+                                одевается на персонажа. Сменить одежду можно в гардеробе дома или в самом магазине. За ранее купленные
+                                вещи деньги не списываются.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="props">Оружие</td>
+                            <td class="props-desc">
+                                низкого качества можно приобрести в магазине Ammu Nation. Найти их можно по значкам пистолета на большой карте.
+                                Более мощное оружие продается в магазинах банд. Для этого необходимо вступить в одну из трех банд и достигнуть в ней
+                                третьего ранга, т.е. "Гангстер"
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="props">Мобильный телефон</td>
+                            <td class="props-desc">
+                                позволяет совершать звонки и отправлять СМС другим игрокам, у которых он тоже есть. Приобрести телефон можно в любом магазине
+                                24/7, там же и пополнить баланс. Для того, чтобы звонок стал доступен, вы и ваш собеседник должны быть подключены к голосовому
+                                чату.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="hot-keys" class="tab-content">
+                <p><span class="hot-key">Y</span> - Действия игрока</p>
+                <p><span class="hot-key">F2</span> - завезти / заглушить &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;двигатель</p>
+                <p><span class="hot-key">E</span> - основное действие активной &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;работы</p>
+                <p><span class="hot-key">X</span> - Меню активной работы</p>
+                <p><span class="hot-key">I</span> - Инвентарь</p>
+                <p><span class="hot-key">O</span> - GPS</p>
+            </div>
+            <div id="social" class="tab-content">
+                <p>Присоединяйтесь к нам в соц. сетях!</p>
+                <div class="social">
+                    <p class="social-type"><i class="fas fa-globe" aria-hidden="true"></i> Наш сайт:</p>
+                    <span>gtagrime.ru</span>
+                    <p class="social-type"><i class="fab fa-vk"></i> Группа ВК:</p>
+                    <span>vk.com/gtagrime</span>
+                    <p class="social-type"><i class="fab fa-instagram" aria-hidden="true"></i> Инстаграм:</p>
+                    <span>instagram.com/gtagrime</span>
+                    <p class="social-type"><i class="fab fa-discord" aria-hidden="true"></i> Канал в Discord:</p>
+                    <span>discord.gg/qATCGKa</span>
+                </div>
+            </div>
+            <div id="tikets" class="tab-content">
+                <div class="for-tikets">
+                    <p>Нашли неработающий функционал?</p>
+                    <p>Обязательно сообщите об этом в нашей группе:</p>
+                    <p class="public-url">Обсуждения -> Ошибки на сервере</p>
+                </div>
+                <div class="for-proposal">
+                    <p>Есть хорошая идея или предложение по улучшению сервера?</p>
+                    <p>Вы можете поделиться ею в данном обсуждении:</p>
+                    <p class="public-url">Обсуждения -> Предложения и пожелания</p>
+                </div>
+            </div>
+       </form>
+    </body>
+    <script type="text/javascript" src="index.js"></script>
+</html>

@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "Comforta";
+    src: url("../../fonts/Comfortaa-Regular.ttf");
+}
+
+form {
+    font-family: 'Comforta';
+    position: absolute;
+    bottom: 100px;
+    right: 15%;
+    width: 500px;
+    height: 350px;
+    margin: 0 auto;
+    background: rgba(20, 29, 54, .9);
+    box-shadow: 0 0 5px #1C1E21;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+p {
+    padding: 5px;
+}
+
+.header {
+    padding: 10px 0 5px;
+    width: 100%;
+    height: 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+button {
+    font-family: 'Comforta';
+    background: transparent;
+    margin-left: 15px;
+    outline: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+button:hover {
+    cursor: pointer;
+    color: #fff;    
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+}
+
+.close:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.tab-content {
+    padding: 0 20px; 
+    color: #fff;
+    height: 240px;
+    font-size: 15px;
+    text-align: center;
+}
+
+#info {
+    display: block;
+}
+
+#hot-keys {
+    display: none;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#hot-keys p {
+    margin-top: 10px;
+}
+
+.hot-key {
+    color: aquamarine
+}
+
+#social {
+    display: none;
+}
+
+.social > span {    
+    display: block;
+    color: rgb(215, 226, 189);
+    text-decoration: none;
+}
+
+.help-info {
+    width: 100%;
+    height: 275px;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.help-info > p:nth-child(1) {
+    margin-top: 3px;
+}
+
+.help-info > p {
+    margin-top: 25px;
+    color: rgb(76, 248, 191)
+}
+
+table {
+    margin-top: 2px;
+}
+
+td {
+    padding-top: 10px;
+}
+
+.main-props {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: left;
+}
+
+.props {
+    color: aquamarine
+}
+
+.props-desc {
+    padding-left: 10px;
+    text-align: left;
+    font-size: 12px;
+}
+
+p.social-type {
+    margin-top: 10px;
+    color: #fff;
+}
+
+#tikets {
+    display: none;
+}
+
+.for-tikets, .for-proposal {
+    width: 80%;
+    margin: 10px auto 25px;
+}
+
+p.public-url {
+    display: block;
+    color: rgb(255, 123, 0);    
+    width: 80%;
+    margin: 10px auto 0;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.help-info::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+}
+
+.help-info::-webkit-scrollbar {
+	width: 6px;
+}
+
+.help-info::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color:rgba(14, 19, 31, 0.9)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "Comforta";
+    src: url("../fonts/Comfortaa-Regular.ttf");
+}
+
+form {
+    font-family: 'Comforta';
+    position: absolute;
+    top: 2%;
+    right: 5px;
+    width: 22%;
+    min-width: 300px;
+    height: 660px;
+    margin: 0 auto;
+    background: #33425B;
+    box-shadow: 0 2px 6px #1C1E21;
+    color: rgb(228, 227, 227);
+    border-radius: 5px;
+}
+
+h1 {
+    padding: 10px 5px;
+    font-size: 18px; 
+    font-family: 'Comforta';
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    display: none;
+    font-size: 12px;
+}
+
+.name-block, .ranges-block {
+    margin-bottom: 25px;
+}
+
+.text-input {
+    font-family: 'Comforta';
+    text-align: center;
+    display: block;
+    height: 25px;
+    width: 55%;
+    margin: 3px auto;
+    border-radius: 5px;
+    border: 2px solid #b5b8bf;
+    padding: 2px 5px;
+    outline: none;
+}
+
+.range-slider {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+button {
+    display: block;
+    width: 45%;
+    padding: 10px 0;
+    margin: 10px auto;
+    background: #00AD7C;
+    border: 1px solid #00AD7C;
+    color: rgb(248, 248, 248);
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background: rgb(6, 202, 147);
+    box-shadow: 0 2px 5px rgb(34, 36, 39); 
+}
+
+div.sex > div {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+div.sex > div:nth-child(2) {
+    margin-right: 10px;
+}
+
+div.sex {
+    width: 195px;
+    margin: 0 auto;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    font-family: "Comforta";
+    font-size: 14px;
+}
+
+label:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+input[type="radio"] + label span {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+input[type="radio"] + label span {
+    background-color:#0e3057;
+}
+
+input[type="radio"]:checked + label span{
+    background-color:#00AD7C;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+    -webkit-transition: background-color 0.4s linear;
+    -o-transition: background-color 0.4s linear;
+    -moz-transition: background-color 0.4s linear;
+    transition: background-color 0.4s linear;
+}
+
+input[type=range] {
+    margin-top: 5px; 
+    outline: none;
+    width: 60%;
+    height: 6px;
+    background-color: #636975;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    -webkit-appearance: none;
+}
+
+input[type=range]::-moz-range-track {
+    box-shadow: none;
+    border: none;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    width: 14px;
+    height: 14px;
+    border: 0;
+    background: #0e3057;
+    border-radius: 100%;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    background: #00AD7C
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border: 0;
+    background: #fff;
+    border-radius: 100%;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.1);
+}
+
+.m-shape {
+    position: absolute;
+    left: 4.2vw;
+}
+
+.f-shape {
+    position: absolute;
+    right: 4.2vw;
+}
+
+i {
+    position: absolute;
+    font-size: 1.4vw;
+}
+
+i:hover {
+    color: #00AD7C;
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 3.2vw;
+}
+
+.arrow-right {
+    right: 3.2vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}

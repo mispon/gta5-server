@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" href="styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
+        <script type="text/javascript" src="../../jquery.js"></script>
+    </head>
+    <body>
+       <form>
+           <div class="header">
+                <button onclick="showInfoTab(event)">Информация</button>
+                <button onclick="showEventsTab(event)">Эвенты</button>
+                <button class="settings-btn" onclick="showSettingsTab(event)">Настройки</button>
+                <div class="close"><i class="fa fa-times" aria-hidden="true"></i></div>
+           </div>
+           <div id="info" class="tab-content">
+                <p class="name">username</p>
+                <p class="tagname"></p>
+                <div class="main-info">
+                    <p>Уровень:&nbsp;<span id="level">0</span></p>
+                    <p>Опыт:&nbsp;<span id="exp">0</span></p>
+                    <p>Деньги:&nbsp;<span id="money">0</span>$</p>
+                    <p>Вод. лицензия:&nbsp;<span id="driver">нет</span></p>
+                    <p>Розыск:&nbsp;<span id="wanted">0</span></p>
+                    <p class="clan-rank">Ранг банды:&nbsp;<span id="clan-rank">0</span></p>
+                    <p class="clan-rep">Репутация:&nbsp;<span id="clan-rep">0</span></p>
+                </div>
+                <div class="second-info">
+                    <p>Телефон:&nbsp;<span id="phone">нет</span></p>
+                    <p>Баланс:&nbsp;<span id="phone-balance">0</span>$</p>
+                    <p>Работа:&nbsp;<span id="work">нет</span></p>
+                    <p class="work-level">Раб. уровень:&nbsp;<span id="work-level">0</span></p>
+                    <p class="work-exp">Раб. опыт:&nbsp;<span id="work-exp">0</span></p>
+                    <p class="salary">Зарплата:&nbsp;<span id="salary">0</span>$</p>
+                </div>
+           </div>
+           <div id="events" class="tab-content">
+               <p class="event-status">Сейчас нет активных эвентов</p>
+               <p class="event-name"></p>
+               <p class="event-type"></p>
+               <p class="event-members">Участники:&nbsp;<span class="members">0</span> / <span class="max-members">0</span></p>               
+               <button id="event-btn" class="event-btn enter-event">Вступить</button>
+               <p class="event-member">Вы принимаете участие!</p>
+           </div>
+           <div id="settings" class="tab-content">
+               <div class="speedometer-settings">
+                    <p>Графический спидометр:</p>
+                    <p class="alert">*снижает производительность</p>
+                    <input type="checkbox" id="svg">
+                    <label for="svg"></label>
+               </div>                
+           </div>
+       </form>
+    </body>
+    <script type="text/javascript" src="index.js"></script>
+</html>

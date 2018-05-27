@@ -1,0 +1,19 @@
+{
+    "version": "1.0.0",
+    "compilerOptions": {
+      "module": "es2015",
+      "target": "es5",
+      "sourceMap": false,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "lib": ["es2015"]
+    },
+    "awesomeTypescriptLoaderOptions": {
+      "useCache ": true,
+      "cacheDirectory": ".awcache"
+    },
+    "include": [
+      "./*.ts"
+    ]
+  }
+  

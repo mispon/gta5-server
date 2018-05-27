@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Comfortaa";
+    src: url("../../fonts/Comfortaa-Regular.ttf");
+}
+
+p {
+    text-shadow: 0 0 2px black;
+    font-family: 'Comfortaa';
+    font-size: 18px;
+}
+
+.speedContainer {
+    color: #50e3c2;
+}
+
+.fuelContainer {
+    color: #2e89ba;
+}
+
+.car-info {
+    position: absolute;
+    right: 35px;
+    bottom: 100px
+}

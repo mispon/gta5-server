@@ -1,0 +1,31 @@
+﻿<html>
+  <head>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <link type="text/css" href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="test-form">
+      <div class="test-info">
+        <div class="question">
+          <p></p>            
+        </div>
+        <ul class="answers">
+            <li class="answ-1"></li>
+            <li class="answ-2"></li>
+            <li class="answ-3"></li>
+            <li class="answ-4"></li>
+        </ul>
+      </div>
+      <div class="result-info">
+        <h1>Результат экзамена:</h1>
+        <div class="result-statistic">
+          <p>Количество правильных ответов:</p>
+          <p class="answers-count"></p>
+        </div>
+        <p id="result-message"></p>
+        <button class="finish-exam" onclick="safetySend('finishExam')">Завершить</button>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="index.js"></script>
+</html>

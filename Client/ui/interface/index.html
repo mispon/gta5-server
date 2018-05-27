@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" href="styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+
+        <script type="text/javascript" src="../jquery.js"></script>
+        <script type="text/javascript" src="index.js" defer></script>
+    </head>
+    <body>
+        <div class="timer">
+            <p></p>
+        </div>
+        <div class="hint">
+            <p class="hint-header">Подсказка</p>
+            <p class="hint-message"></p>
+        </div>
+        <div class="top-right">
+            <p class="money"></p>
+            <p class="satiety">Сытость</p>
+            <div id="satiety-progress">
+			  <p class="satiety-percent"></p>
+              <div id="satiety-bar"></div>
+            </div>
+            <p class="exp">Опыт</p>
+            <div id="experience">                
+                <p class="exp-percent"></p>
+                <div id="exp-bar"></div>
+            </div>
+            <div class="gifts">
+                <img src="gift.png" />
+                <p class="gift-timer">00:00</p>
+            </div>
+        </div>
+        <div id="action-progress">
+            <div id="action-progress-bar"></div>
+        </div>        
+        <div class="icons">
+            <div class="user-info">
+                <i class="fas fa-user-circle" aria-hidden="true"></i>
+                <span class="hot-key">U</span>
+            </div>
+            <div class="phone">
+                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                <span class="hot-key">P</span>
+            </div>
+            <div class="help">
+                <i class="fas fa-question-circle" aria-hidden="true"></i>
+                <span class="hot-key">J</span>
+            </div>
+        </div>       
+    </body>
+</html>

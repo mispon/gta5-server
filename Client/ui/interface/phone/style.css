@@ -1,0 +1,203 @@
+@font-face {
+    font-family: "Comforta";
+    src: url("../../fonts/Comfortaa-Regular.ttf");
+}
+
+.phone {
+    font-family: 'Comforta';
+    color: whitesmoke;
+    background-image: url('phone.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 75% 100%;
+    position: absolute;
+    bottom: 10vh;
+    right: 14vw;
+    width: 15vw;
+    height: 40vh;
+}
+
+.contacts-display {
+    display: block;
+    width: 9.9vw;
+    height: 19.7vh;
+    background-color: #005577;
+    margin: 10.1vh 2.65vw 0;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+p.no-contacts {
+    text-align: center;
+    font-size: 0.7vw;
+    margin-top: 6vh;
+}
+
+.contact-info {
+    float: left;
+    width: 75%;
+    margin-left: 0.5vw;
+}
+
+.contact-info p {
+    font-size: 0.8vw;
+}
+
+.contact-info small {
+    font-size: 0.5vw;
+    color: #b5b7b6;
+}
+
+.contact-btns {
+    float: right;
+    width: 15%;
+    padding: 0.6vw 0.2vw 0 0;
+    font-size: 0.7vw;
+    color: #10e544;
+}
+
+.contact-btns i {
+    margin: 0 0.1vw;
+}
+
+ul.contacts {
+    padding: 1.5vh 0.6vw 0;
+}
+
+ul.contacts li {
+    list-style-type: none;
+    font-size: 14px;
+    height: 4vh;
+    margin: 0.3vh 0 0.7vh;
+    border-bottom: 1px solid rgba(0,0,0,.3);
+}
+
+.new-contact-form {
+    display: none;
+    position: absolute;
+    width: 94%;
+    bottom: 0;
+    padding: 7px 5px 1px;
+    margin-left: 1px;
+    background-color: #101c30;
+}
+
+.new-contact-form input {
+    width: 65%;
+    margin-bottom: 4px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 2px 8px;
+}
+
+.new-contact-form i {
+    position: absolute;
+    right: 0.5vw;
+    top: 2vh;
+    font-size: 1.1vw;
+    color: #10e544;
+}
+
+.new-contact {
+    width: 1.8vw;
+    height: 2vh;
+    color: powderblue;
+    position: absolute;
+    left: 45%;
+    bottom: 8vh;
+}
+
+.call-display, .inc-call-display {
+    display: none;
+    width: 9.9vw;
+    height: 22.9vh;
+    background-color: #005577;
+    margin: 6.9vh 2.65vw 0;
+    position: relative;
+}
+
+.call-display .callee {
+    text-align: center;
+    padding-top: 5vh;
+    font-size: 1vw;
+}
+
+.call-display .callee-number {
+    text-align: center;
+    padding-top: 0.5vh;
+    font-size: 0.6vw;
+    color: #b5b7b6;
+}
+
+.call-display i {
+    color: red;
+    position: absolute;
+    bottom: 4vh;
+    left: 44%;
+    font-size: 1.6vw;
+}
+
+.back {
+    width: 1.8vw;
+    height: 2vh;
+    color: red;
+    position: absolute;
+    right: 22%;
+    bottom: 8vh;
+}
+
+.new-contact i, .back i {
+    font-size: 0.8vw;
+    padding: 0.7vh 0 0 0.65vw;
+}
+
+.inc-call-display .caller {
+    text-align: center;
+    font-size: 1vw;
+    padding-top: 5vh;
+}
+
+.inc-call-display .caller-number {
+    text-align: center;
+    font-size: 0.65vw;
+    padding-top: 0.6vh;
+    color: #928B8B;
+}
+
+.inc-call-display i {
+    position: absolute;
+    bottom: 4vh;
+    font-size: 1.6vw;
+}
+
+.inc-call-display .accept-call {
+    color: #01c632;    
+    left: 30%;
+}
+
+.inc-call-display .decline-call {
+    color: red;
+    right: 30%;    
+}
+
+.contacts-display::-webkit-scrollbar-track, ul.chat::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+}
+
+.contacts-display::-webkit-scrollbar, ul.chat::-webkit-scrollbar {
+	width: 6px;
+}
+
+.contacts-display::-webkit-scrollbar-thumb, ul.chat::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color:rgba(14, 19, 31, 0.9)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}

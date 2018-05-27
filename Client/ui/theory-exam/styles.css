@@ -1,0 +1,109 @@
+@font-face {
+    font-family: "Comfortaa";
+    src: url("../fonts/Comfortaa-Regular.ttf");
+}
+
+.test-form {
+  position: relative;
+  top: 25%;
+  width: 40%;
+  min-width: 700px;
+  height: 400px;
+  margin: 0 auto;
+  background: #20305c;
+  background: rgba(20, 29, 54, .9);
+  box-shadow: 0 0 5px #1C1E21;
+  border-radius: 5px;
+  color: #b5b8bf;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.test-info {
+  display: block;
+}
+
+.result-info {
+  display: none;
+}
+
+.question {
+  height: 150px;
+  text-align: center;
+  padding: 22px;
+  margin: 1px;  
+  font-size: 20px;
+  border-bottom: 1px solid #b5b8bf;
+}
+
+.question > p {
+  display: block;
+  margin: 30px auto 0;
+  width: 70%;
+}
+
+ul.answers {
+  text-align: center;
+    color: #b5b8bf;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 15px;
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+ul > li {
+  list-style-type: none;
+  margin: 20px;
+}
+
+ul > li:hover {
+  cursor: pointer;
+  color: #FFFFFF;
+}
+h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.result-info p {
+  text-align: center;
+}
+
+.result-statistic {
+  margin-top: 40px;
+}
+
+.answers-count {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+button.finish-exam {
+  font-family: "Comfortaa", sans-serif;
+  background: #b5b8bf;
+  border: 1px solid #b5b8bf;
+  border-radius: 5px;
+  padding: 12px;
+  color: #20305c;
+  outline: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 50px;
+  box-shadow: 0 2px 10px #1C1E21;
+}
+
+button.finish-exam:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 #1C1E21;
+}
+
+.success {
+  color: rgb(20, 211, 13)
+}
+
+.fail {
+  color: #ee0909
+}

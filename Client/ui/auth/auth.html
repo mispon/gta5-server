@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript" src="../validation.js"></script>
+</head>
+<body>
+<form class="login">
+    <div class="input-form">
+        <div class="info">
+            <h1 class="animated fadeInDown">GTA 5 GRIME</h1>
+            <p>Добро пожаловать на сервер!</p>
+        </div>
+        <div class="input-fields">
+            <input id="l-email" class="block" type="text" placeholder="Почта" autocomplete="off"/>
+            <input id="l-password" class="block" type="password" placeholder="Пароль"/>
+            <div class="error-message"><p></p></div>
+            <button class="login-button" id="login">Войти</button>
+            <div class="to-register"><a href="#">Нет аккаунта? Зарегистрироваться</a></div>
+        </div>
+    </div>
+    <div class="login-image image-form"></div>
+</form>
+<form class="registration">
+    <div class="input-form">
+        <div class="info">
+            <h1 class="animated fadeInDown">Five Roleplay</h1>
+            <p>Добро пожаловать на сервер!</p>
+        </div>
+        <div class="input-fields main-info">
+            <input id="r-email" class="block" type="text" placeholder="Почта" autocomplete="off"/>
+            <input id="r-password" class="block" type="password" placeholder="Пароль"/>
+            <input id="re-password" class="block" type="password" placeholder="Подтвердите пароль"/>
+            <div class="error-message"><p></p></div>
+            <button id="continue" class="register-button">Продолжить</button>
+        </div>
+		<div class="input-fields referal-info">
+			<small class="can-skip">*Данное поле можно оставить пустым</small>
+            <!-- <input id="youtuber-referal" class="block" type="text" placeholder="Реферальный код ютубера" autocomplete="off"/> -->
+            <input id="friend-referal" class="block" type="text" placeholder="Ник пригласившего друга"/>
+            <div class="error-message"><p></p></div>
+            <button id="register" class="register-button">Зарегистрироваться</button>            
+        </div>
+        <div class="to-login"><a href="#">Есть аккаунт? Войти</a></div>
+    </div>
+    <div class="register-image image-form"></div>
+</form>
+<script type="text/javascript" src="login.js"></script>
+<script type="text/javascript" src="register.js"></script>
+<script type="text/javascript" src="../input-corrector.js"></script>
+</body>
+</html>

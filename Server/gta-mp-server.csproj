@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64283ED4-AF10-410B-A0DA-C4A500A9CBBE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gta_mp_server</RootNamespace>
+    <AssemblyName>gta-mp-server</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net, Version=0.1.5073.29922, Culture=neutral, PublicKeyToken=6bcd409ee6bc9292, processorArchitecture=MSIL">
+      <HintPath>packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="GrandTheftMultiplayer.Server, Version=0.1.798.595, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\grandtheftmultiplayer.api.0.1.798.595\lib\net452\GrandTheftMultiplayer.Server.exe</HintPath>
+    </Reference>
+    <Reference Include="GrandTheftMultiplayer.Shared, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\grandtheftmultiplayer.api.0.1.798.595\lib\net452\GrandTheftMultiplayer.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="gta-mp-data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\gta-mp-data.1.0.3\lib\gta-mp-data.dll</HintPath>
+    </Reference>
+    <Reference Include="JustAnotherVoiceChat.Server.GTMP, Version=0.3.4.238, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\JustAnotherVoiceChat.Server.GTMP.0.3.4.238\lib\net452\JustAnotherVoiceChat.Server.GTMP.dll</HintPath>
+    </Reference>
+    <Reference Include="JustAnotherVoiceChat.Server.Wrapper, Version=0.3.4.238, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\JustAnotherVoiceChat.Server.Wrapper.0.3.4.238\lib\netstandard1.2\JustAnotherVoiceChat.Server.Wrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="linq2db, Version=1.10.2.0, Culture=neutral, PublicKeyToken=f19f8aed7feff67e, processorArchitecture=MSIL">
+      <HintPath>packages\linq2db.1.10.2\lib\net45\linq2db.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>packages\NLog.4.4.12\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.4.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clan\ClanCourtyard.cs" />
+    <Compile Include="Clan\ClanHall.cs" />
+    <Compile Include="Clan\Data\MissionDataGetter.cs" />
+    <Compile Include="Clan\Interfaces\IClanCourtyard.cs" />
+    <Compile Include="Clan\Mission\MissionMenuHandler.cs" />
+    <Compile Include="Clan\ClanManager.cs" />
+    <Compile Include="Clan\ClanMenuHandler.cs" />
+    <Compile Include="Clan\Data\ClanDataGetter.cs" />
+    <Compile Include="Clan\DistrictWar\DistrictWarsManager.cs" />
+    <Compile Include="Clan\DistrictWar\DistrictWarsScheduler.cs" />
+    <Compile Include="Clan\Interfaces\IClanManager.cs" />
+    <Compile Include="Clan\Interfaces\IDistrictWarsManager.cs" />
+    <Compile Include="Clan\Mission\ClanMissionManager.cs" />
+    <Compile Include="Clan\Interfaces\IClanMissionManager.cs" />
+    <Compile Include="Clan\Mission\СlanMission.cs" />
+    <Compile Include="Constant\Colors.cs" />
+    <Compile Include="Constant\Dimension.cs" />
+    <Compile Include="Constant\PlayerData.cs" />
+    <Compile Include="Constant\ServerEvent.cs" />
+    <Compile Include="Constant\ClientEvent.cs" />
+    <Compile Include="Constant\WorkData.cs" />
+    <Compile Include="Enums\Clan\MissionPlace.cs" />
+    <Compile Include="Enums\EventTeam.cs" />
+    <Compile Include="Enums\EventType.cs" />
+    <Compile Include="Enums\RaceType.cs" />
+    <Compile Include="Enums\DeliveryContractType.cs" />
+    <Compile Include="Enums\TemporarySkin.cs" />
+    <Compile Include="Enums\Vehicles\VehicleDoor.cs" />
+    <Compile Include="Enums\Vehicles\VehicleMod.cs" />
+    <Compile Include="Enums\Vehicles\VehicleType.cs" />
+    <Compile Include="Enums\ShowroomType.cs" />
+    <Compile Include="Enums\ClothesShopType.cs" />
+    <Compile Include="Enums\ClothesType.cs" />
+    <Compile Include="Enums\HouseState.cs" />
+    <Compile Include="Enums\PolicemanState.cs" />
+    <Compile Include="Events\Interfaces\IPlayerFinishDownloadManager.cs" />
+    <Compile Include="Events\Interfaces\IVehicleEnterManager.cs" />
+    <Compile Include="Events\Interfaces\IPlayerDamagedManager.cs" />
+    <Compile Include="Events\PlayerDamagedManager.cs" />
+    <Compile Include="Events\PlayerFinishDownloadManager.cs" />
+    <Compile Include="Events\VehicleEventsManager.cs" />
+    <Compile Include="GameEvents\CountryBreakdown.cs" />
+    <Compile Include="GameEvents\Data\CountryBreakdownData.cs" />
+    <Compile Include="GameEvents\PrisonRiot.cs" />
+    <Compile Include="GameEvents\Data\PrisonRiotData.cs" />
+    <Compile Include="GameEvents\Data\SniperBattleData.cs" />
+    <Compile Include="GameEvents\EventsScheduler.cs" />
+    <Compile Include="GameEvents\Interfaces\GameEvent.cs" />
+    <Compile Include="GameEvents\SniperBattle.cs" />
+    <Compile Include="Global\ChatHandler.cs" />
+    <Compile Include="Global\DatabaseSynchronizer.cs" />
+    <Compile Include="Global\EnumExtentions.cs" />
+    <Compile Include="Global\Interfaces\IChatHandler.cs" />
+    <Compile Include="Global\Interfaces\IDatabaseSynchronizer.cs" />
+    <Compile Include="Global\WeatherManager.cs" />
+    <Compile Include="Helpers\ActionHelper.cs" />
+    <Compile Include="Helpers\CopyHelper.cs" />
+    <Compile Include="Helpers\Doormanager.cs" />
+    <Compile Include="Enums\AnimationFlags.cs" />
+    <Compile Include="Enums\BlipColor.cs" />
+    <Compile Include="Enums\Marker.cs" />
+    <Compile Include="Enums\Vehicles\SuperCar.cs" />
+    <Compile Include="Enums\Vehicles\VehicleColor.cs" />
+    <Compile Include="Global\ClientEventHandler.cs" />
+    <Compile Include="Global\Interfaces\IWorldInitializer.cs" />
+    <Compile Include="Constant\MainPosition.cs" />
+    <Compile Include="Global\ServerState.cs" />
+    <Compile Include="Global\WorldInitializer.cs" />
+    <Compile Include="Helpers\GtaCharacter.cs" />
+    <Compile Include="Helpers\HouseHelper.cs" />
+    <Compile Include="Helpers\Interfaces\IGtaCharacter.cs" />
+    <Compile Include="Helpers\PlayerHelper.cs" />
+    <Compile Include="Helpers\PointCreator.cs" />
+    <Compile Include="Helpers\Interfaces\IPointCreator.cs" />
+    <Compile Include="Helpers\Interfaces\IDoormanager.cs" />
+    <Compile Include="Helpers\PositionConverter.cs" />
+    <Compile Include="Helpers\Validator.cs" />
+    <Compile Include="IoC\DatabaseCoreModule.cs" />
+    <Compile Include="IoC\ServerKernel.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Managers\Fun\FightsBoxCreator.cs" />
+    <Compile Include="Managers\Fun\Parachute.cs" />
+    <Compile Include="Managers\Fun\StreetFights.cs" />
+    <Compile Include="Managers\Auth\CreatingCharManager.cs" />
+    <Compile Include="Managers\Auth\Interfaces\ICreatingCharManager.cs" />
+    <Compile Include="Managers\Auth\LoginManager.cs" />
+    <Compile Include="Managers\Auth\RegistrationManager.cs" />
+    <Compile Include="Managers\House\HouseEventManager.cs" />
+    <Compile Include="Managers\House\HouseManager.cs" />
+    <Compile Include="Managers\House\HousesPositionsGetter.cs" />
+    <Compile Include="Managers\House\Interfaces\IHouseEventManager.cs" />
+    <Compile Include="Managers\House\Interfaces\IHouseManager.cs" />
+    <Compile Include="Managers\House\Interfaces\IStorageManager.cs" />
+    <Compile Include="Managers\House\StorageManager.cs" />
+    <Compile Include="Managers\IScheduler.cs" />
+    <Compile Include="Managers\Interface\Interfaces\IInterfaceManager.cs" />
+    <Compile Include="Managers\Interface\InterfaceManager.cs" />
+    <Compile Include="Managers\MenuHandlers\RacecourseMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\BistroMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\BuilderMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\BusDriverMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\FarmMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\FishermanMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\ParkingFineMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\RaceMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\TruckersMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\VehicleShowroomMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\ClothesMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\DressingRoomMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\FillingMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\GpsMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\HouseMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Interfaces\BaseWorkMenu.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\ForkliftMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Interfaces\IMenu.cs" />
+    <Compile Include="Managers\MenuHandlers\NurseMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\PoliceMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\RentOfScootersMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\ShopMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\TaxiDriverMenuHandler.cs" />
+    <Compile Include="Managers\NPC\FishermanNpc.cs" />
+    <Compile Include="Managers\NPC\ForkliftNpc.cs" />
+    <Compile Include="Managers\NPC\FarmNpc.cs" />
+    <Compile Include="Managers\NPC\BistroNpc.cs" />
+    <Compile Include="Managers\NPC\Interfaces\INPC.cs" />
+    <Compile Include="Managers\NPC\LoaderNpc.cs" />
+    <Compile Include="Managers\NPC\ParkingFineNpc.cs" />
+    <Compile Include="Managers\NPC\ParkingNpc.cs" />
+    <Compile Include="Managers\NPC\PolicemanNpc.cs" />
+    <Compile Include="Managers\NPC\RaceNpc.cs" />
+    <Compile Include="Managers\NPC\RentOfScootersNpc.cs" />
+    <Compile Include="Managers\NPC\StreetFightNpc.cs" />
+    <Compile Include="Managers\NPC\TaxiDriverNpc.cs" />
+    <Compile Include="Managers\NPC\BusDriverNpc.cs" />
+    <Compile Include="Managers\NPC\BuilderNpc.cs" />
+    <Compile Include="Managers\Phone\Interfaces\IPhoneManager.cs" />
+    <Compile Include="Managers\Phone\PhoneManager.cs" />
+    <Compile Include="Managers\Places\AirPorts\AirPort.cs" />
+    <Compile Include="Managers\Places\AirPorts\AirPortData.cs" />
+    <Compile Include="Managers\Places\Building.cs" />
+    <Compile Include="Managers\Places\FarmPlace\Farm.cs" />
+    <Compile Include="Managers\Places\FishingVillage.cs" />
+    <Compile Include="Managers\Places\Hospitals\HospitalHelper.cs" />
+    <Compile Include="Managers\Places\ScrapMetalDump.cs" />
+    <Compile Include="Managers\Places\TextileMill.cs" />
+    <Compile Include="Managers\Places\Weapon\AmmuNation.cs" />
+    <Compile Include="Managers\Places\Bistro.cs" />
+    <Compile Include="Managers\Places\BusDepot.cs" />
+    <Compile Include="Managers\Places\ParkingFine.cs" />
+    <Compile Include="Managers\Places\Port.cs" />
+    <Compile Include="Managers\Places\VehicleShowroom\VehicleShowroom.cs" />
+    <Compile Include="Managers\Places\VehicleShowroom\ShowroomsGetter.cs" />
+    <Compile Include="Managers\Places\ClothesShop\ClothesGetter.cs" />
+    <Compile Include="Managers\Places\ClothesShop\PositionsGetter.cs" />
+    <Compile Include="Managers\Places\ClothesShop\ClothesShop.cs" />
+    <Compile Include="Managers\Places\DrivingSchool.cs" />
+    <Compile Include="Managers\MenuHandlers\AdminMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\LoaderMenuHandler.cs" />
+    <Compile Include="Managers\MenuHandlers\DrivingSchoolMenuHandler.cs" />
+    <Compile Include="Managers\NPC\DrivingSchoolNpc.cs" />
+    <Compile Include="Managers\DrivingSchool\DriverPracticeExamManager.cs" />
+    <Compile Include="Managers\DrivingSchool\Interfaces\IDriverPracticeExamManager.cs" />
+    <Compile Include="Managers\Places\FillingStation.cs" />
+    <Compile Include="Managers\Places\Hospitals\Hospital.cs" />
+    <Compile Include="Managers\Places\Interfaces\Place.cs" />
+    <Compile Include="Managers\Places\Parking.cs" />
+    <Compile Include="Managers\Places\PoliceDepartment.cs" />
+    <Compile Include="Managers\Places\Shop.cs" />
+    <Compile Include="Managers\Places\TaxiDepot.cs" />
+    <Compile Include="Managers\Places\Weapon\AmmuNationData.cs" />
+    <Compile Include="Managers\Player\GiftsManager.cs" />
+    <Compile Include="Managers\Player\Interfaces\IInventoryHelper.cs" />
+    <Compile Include="Managers\Player\Helpers\InventoryHelper.cs" />
+    <Compile Include="Managers\Player\Interfaces\IGiftsManager.cs" />
+    <Compile Include="Managers\Player\Interfaces\IInventoryManager.cs" />
+    <Compile Include="Managers\Player\Interfaces\IPlayerInfoManager.cs" />
+    <Compile Include="Managers\Player\Interfaces\IWorkInfoManager.cs" />
+    <Compile Include="Managers\Player\Interfaces\IPlayerManager.cs" />
+    <Compile Include="Managers\Player\InventoryManager.cs" />
+    <Compile Include="Managers\Player\Interfaces\IOpportunitiesNotifier.cs" />
+    <Compile Include="Managers\Player\OpportunitiesNotifier.cs" />
+    <Compile Include="Managers\Player\PlayerActionsMenuHandler.cs" />
+    <Compile Include="Managers\Player\PlayerInfoManager.cs" />
+    <Compile Include="Managers\Player\PlayerManager.cs" />
+    <Compile Include="Managers\Player\WorkInfoManager.cs" />
+    <Compile Include="Events\Interfaces\IPlayerConnectManager.cs" />
+    <Compile Include="Events\Interfaces\IPlayerDisconnectManager.cs" />
+    <Compile Include="Events\Interfaces\IPlayerDeathManager.cs" />
+    <Compile Include="Events\Interfaces\IPlayerRespawnManager.cs" />
+    <Compile Include="Events\PlayerConnectManager.cs" />
+    <Compile Include="Events\PlayerDeathManager.cs" />
+    <Compile Include="Events\PlayerDisconnectManager.cs" />
+    <Compile Include="Events\PlayerRespawnManager.cs" />
+    <Compile Include="Managers\Races\CarRace.cs" />
+    <Compile Include="Managers\Races\Data\CarRaceData.cs" />
+    <Compile Include="Managers\Races\Data\MotoRaceData.cs" />
+    <Compile Include="Managers\Races\Data\MountainRaceData.cs" />
+    <Compile Include="Managers\Races\Data\RallyRaceData.cs" />
+    <Compile Include="Managers\Races\Interfaces\Race.cs" />
+    <Compile Include="Managers\Races\MotoRace.cs" />
+    <Compile Include="Managers\Races\MountainRace.cs" />
+    <Compile Include="Managers\Races\RaceScheduler.cs" />
+    <Compile Include="Managers\Races\Rally.cs" />
+    <Compile Include="Managers\Races\TrackHandlers\CarTrackHandler.cs" />
+    <Compile Include="Managers\Races\TrackHandlers\Interfaces\TrackHandler.cs" />
+    <Compile Include="Managers\Races\TrackHandlers\MotoTrackHandler.cs" />
+    <Compile Include="Managers\Races\TrackHandlers\MountainTrackHandler.cs" />
+    <Compile Include="Managers\Races\TrackHandlers\RallyTrackHandler.cs" />
+    <Compile Include="Managers\Tuning\TuningGarage.cs" />
+    <Compile Include="Managers\Tuning\TuningData.cs" />
+    <Compile Include="Managers\Tuning\TuningMenuHandler.cs" />
+    <Compile Include="Managers\Vehicles\Interfaces\IVehicleManager.cs" />
+    <Compile Include="Managers\Vehicles\Interfaces\IVehicleInfoManager.cs" />
+    <Compile Include="Managers\Vehicles\Interfaces\IVehicleTrunkManager.cs" />
+    <Compile Include="Managers\Vehicles\VehicleActionsMenuHandler.cs" />
+    <Compile Include="Managers\Vehicles\VehicleInfoManager.cs" />
+    <Compile Include="Managers\Vehicles\VehicleManager.cs" />
+    <Compile Include="Managers\Vehicles\VehicleTrunkManager.cs" />
+    <Compile Include="Managers\Work\Builder\BuilderDataGetter.cs" />
+    <Compile Include="Managers\Work\Builder\BuilderManager.cs" />
+    <Compile Include="Managers\Work\Builder\Interfaces\IBuilderManager.cs" />
+    <Compile Include="Managers\Places\FarmPlace\FarmDataGetter.cs" />
+    <Compile Include="Managers\Work\Farmer\FarmerManager.cs" />
+    <Compile Include="Managers\Work\Farmer\Interfaces\IFarmerManager.cs" />
+    <Compile Include="Managers\Work\Farmer\Interfaces\ITractorDriverManager.cs" />
+    <Compile Include="Managers\Work\Farmer\TractorDriverManager.cs" />
+    <Compile Include="Managers\Work\Fisherman\FishermanDataGetter.cs" />
+    <Compile Include="Managers\Work\Fisherman\FishermanManager.cs" />
+    <Compile Include="Managers\Work\Fisherman\Interfaces\IFishermanManager.cs" />
+    <Compile Include="Managers\Work\Forklift\ForkliftDataGetter.cs" />
+    <Compile Include="Managers\Work\Forklift\Interfaces\IForkliftManager.cs" />
+    <Compile Include="Managers\Work\Forklift\Interfaces\IForkliftEventHandler.cs" />
+    <Compile Include="Managers\Work\Loader\Interfaces\ILoaderManager.cs" />
+    <Compile Include="Managers\Work\Loader\Interfaces\ILoaderEventHandler.cs" />
+    <Compile Include="Managers\Work\Loader\LoaderDataGetter.cs" />
+    <Compile Include="Managers\Work\Pilot\Interfaces\IPilotManager.cs" />
+    <Compile Include="Managers\Work\Pilot\PilotManager.cs" />
+    <Compile Include="Managers\MenuHandlers\Work\PilotMenuHandler.cs" />
+    <Compile Include="Managers\Work\Bistro\BistroManager.cs" />
+    <Compile Include="Managers\Work\Bistro\BistroPositionsGetter.cs" />
+    <Compile Include="Managers\Work\Bistro\Interfaces\IBistroManager.cs" />
+    <Compile Include="Managers\Work\BusDriver\BusDriverManager.cs" />
+    <Compile Include="Managers\Work\BusDriver\BusPositionGetter.cs" />
+    <Compile Include="Managers\Work\Interfaces\IWorkEquipmentManager.cs" />
+    <Compile Include="Managers\Work\Loader\LoaderManager.cs" />
+    <Compile Include="Managers\Work\Forklift\ForkliftManager.cs" />
+    <Compile Include="Managers\Work\Forklift\ForkliftEventHandler.cs" />
+    <Compile Include="Managers\Work\Loader\LoaderEventHandler.cs" />
+    <Compile Include="Managers\Work\Police\Data\PoliceDataGetter.cs" />
+    <Compile Include="Managers\Work\Police\Interfaces\IPoliceAlertManager.cs" />
+    <Compile Include="Managers\Work\Police\PoliceAlertManager.cs" />
+    <Compile Include="Managers\Work\Police\Interfaces\IJailManager.cs" />
+    <Compile Include="Managers\Work\Police\Interfaces\IPoliceRewardManager.cs" />
+    <Compile Include="Managers\Work\Police\Interfaces\IPoliceManager.cs" />
+    <Compile Include="Managers\Work\Police\JailManager.cs" />
+    <Compile Include="Managers\Work\Police\PoliceManager.cs" />
+    <Compile Include="Managers\Work\Police\PoliceRewardManager.cs" />
+    <Compile Include="Managers\Work\Taxi\Interfaces\ITaxiDriverManager.cs" />
+    <Compile Include="Managers\Work\Taxi\TaxiDriverManager.cs" />
+    <Compile Include="Managers\Work\Taxi\TaxiPositionsGetter.cs" />
+    <Compile Include="Managers\Work\Trucker\Interfaces\ITruckersManager.cs" />
+    <Compile Include="Managers\Work\Trucker\TruckersDataGetter.cs" />
+    <Compile Include="Managers\Work\Trucker\TruckersManager.cs" />
+    <Compile Include="Managers\Work\WorkEquipmentManager.cs" />
+    <Compile Include="Managers\Work\Wrecker\Interfaces\IWreckerManager.cs" />
+    <Compile Include="Managers\Work\Wrecker\WreckerManager.cs" />
+    <Compile Include="Managers\Work\Wrecker\WreckerPositionsGetter.cs" />
+    <Compile Include="Models\Clan\BootyObjectParams.cs" />
+    <Compile Include="Models\Clan\ClanCourtyardInfo.cs" />
+    <Compile Include="Models\Clan\ClanQuestNpc.cs" />
+    <Compile Include="Models\Places\FillingModel.cs" />
+    <Compile Include="Models\Places\Instances\FarmInstance.cs" />
+    <Compile Include="Models\Places\ShopModel.cs" />
+    <Compile Include="Models\Places\SpawnVehicleInfo.cs" />
+    <Compile Include="Models\Shops\TuningInfo.cs" />
+    <Compile Include="Models\Shops\VehicleShowroomPositions.cs" />
+    <Compile Include="Models\Utils\AfkVehicle.cs" />
+    <Compile Include="Models\Shops\AmmuNationModel.cs" />
+    <Compile Include="Models\Clan\ClanInfo.cs" />
+    <Compile Include="Models\EventInfo.cs" />
+    <Compile Include="Models\Utils\PlayerWithData.cs" />
+    <Compile Include="Models\Work\WorkPoint.cs" />
+    <Compile Include="Models\Work\DeliveryNpc.cs" />
+    <Compile Include="Models\Work\LoaderPoint.cs" />
+    <Compile Include="Models\Work\PoliceAlert.cs" />
+    <Compile Include="Models\Work\DeliveryContract.cs" />
+    <Compile Include="Models\Shops\VehicleShowroomModel.cs" />
+    <Compile Include="Models\Shops\ClothesShopModel.cs" />
+    <Compile Include="Models\Utils\Color.cs" />
+    <Compile Include="Models\Utils\CommonVehicle.cs" />
+    <Compile Include="Models\Shops\DressingRoomPositions.cs" />
+    <Compile Include="Models\Houses\GarageInnerPositions.cs" />
+    <Compile Include="Models\Houses\HousesInnerPositions.cs" />
+    <Compile Include="Models\Utils\PointResult.cs" />
+    <Compile Include="Models\Shops\ShowroomVehicle.cs" />
+    <Compile Include="Models\Shops\WeaponGood.cs" />
+    <Compile Include="Models\Work\WorkReward.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IoC\ServerCoreModule.cs" />
+    <Compile Include="Quests\ClanQuests\CaseFalsification.cs" />
+    <Compile Include="Quests\ClanQuests\DrugDelivery.cs" />
+    <Compile Include="Quests\ClanQuests\ClanRacket.cs" />
+    <Compile Include="Quests\ClanQuests\VehicleTheft.cs" />
+    <Compile Include="Quests\Interfaces\ClanQuest.cs" />
+    <Compile Include="Quests\QuestsData\DrugDealers.cs" />
+    <Compile Include="Quests\QuestsData\ClanRacketData.cs" />
+    <Compile Include="Quests\QuestsData\VehicleTheftData.cs" />
+    <Compile Include="Voice\Interfaces\IVoiceManager.cs" />
+    <Compile Include="Voice\PositionalTask.cs" />
+    <Compile Include="Voice\VoiceManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\gt-mp-database\gta-mp-database.csproj">
+      <Project>{25AE7701-B0D2-4BEA-BD21-EABE788F0E81}</Project>
+      <Name>gta-mp-database</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Business\Interfaces\" />
+    <Folder Include="Managers\Tuning\Interfaces\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
