@@ -23,8 +23,7 @@ namespace gta_mp_database {
                 yield return new ConnectionSettings {
                     Name = "GtaVServer",
                     ProviderName = "SqlServer",
-                    //ConnectionString = "Server=localhost;Database=gta-mp-server;User Id=sa;Password=Ab933095;"
-                    ConnectionString = @"Server=localhost\SQLEXPRESS;Database=gta-mp-server;User Id=sa;Password=Gta5Server;"
+                    ConnectionString = "Server=localhost;Database=gta-mp-server;User Id=YOURNAME;Password=YOURPASS;"
                 };
             }
         }

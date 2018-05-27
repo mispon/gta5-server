@@ -25,7 +25,7 @@ namespace gta_mp_server.Managers.Auth {
     internal class LoginManager : Script, IInterfaceManager {
         internal const string DISABLE_HOTKEYS = "DisableHotkeys";
 
-        private readonly List<string> _admins = new List<string> {"Pinbaxter", "Caesium666", "RandowGM"};
+        private readonly List<string> _admins = new List<string> {"Your Social Club Name"};
 
         private readonly IAccountsProvider _accountsProvider;
         private readonly IPlayersProvider _playersProvider;
@@ -76,11 +76,6 @@ namespace gta_mp_server.Managers.Auth {
         /// Обработчик логина игрока
         /// </summary>
         private void PlayerLogin(Client player, object[] args) {
-            //var accesses = _fakeLogins[player.socialClubName];
-            //if (!_admins.Contains(player.socialClubName)) {
-            //    player.kick("На сервере ведутся технические работы. Приносим извенения!");
-            //    return;
-            //}
             var email = args[0].ToString();
             var password = args[1].ToString();
             var account = _accountsProvider.Get(email, password);
@@ -164,14 +159,5 @@ namespace gta_mp_server.Managers.Auth {
                 _vehicleInfoManager.SetInfo(player, vehicle);
             }
         }
-
-        /// <summary>
-        /// Для быстрого логина на тестовом
-        /// </summary>
-        private static readonly Dictionary<string, string[]> _fakeLogins = new Dictionary<string, string[]> {
-            ["Pinbaxter"] = new[] { "dev@dev.com", "abc123" },
-            ["Caesium666"] = new[] {"caesium2000@gmail.com", "147369"},
-            ["RandowGM"] = new[] { "randowgm@gmail.com", "123456"}
-        };
     }
 }
