@@ -32,7 +32,7 @@ In short, what is implemented on the server:
 - Game command events that start automatically every hour: a sniper duel, a prison riot, and so on;
 - 4 kinds of races;
 - Voice chat;
-"A gang system, I call it clans." Total made 3 clans: Michael, Trevor and Frank. Every day for the clans a battle starts for the territory (A marker appears in one of the districts and it must be captured and held).
+- A gang system, I call it clans. Total made 3 clans: Michael, Trevor and Frank. Every day for the clans a battle starts for the territory (A marker appears in one of the districts and it must be captured and held).
   If the clan owns the territory, then it receives income from all stores, gas stations, etc.
   Also, clans have missions that are started and executed jointly by clan members. The essence of the missions is that you need to take a van, somewhere to get there, load the van with valuable cargo and successfully take it to the base.
   Leaders of gangs can take various tasks, like quests: steal a supercar, take drugs to dealers or replace documents in a police station;
