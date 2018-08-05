@@ -27,8 +27,8 @@ namespace gta_mp_server.Voice {
         /// Инициализация голосового чата
         /// </summary>
         private void OnStart() {
-            var teamSpeakConfig = new VoiceServerConfiguration("194.87.101.165", 23332, "8nwm0jHKWfrtSCTc1JYXsded55A=", 3, "GtaVGrimeVoice"); // prod
-            //var teamSpeakConfig = new VoiceServerConfiguration("localhost", 23332, "Av0yWcX9rmJg6QWS1Hw1NG7HNK0=", 3, "qwe123"); // local
+            // more info: https://github.com/AlternateLife/JustAnotherVoiceChat-Server
+            var teamSpeakConfig = new VoiceServerConfiguration("localhost", 23332, "virtualserver_unique_identifier", 2, "chanel pass");
             VoiceServer = GtmpVoice.CreateServer(API, teamSpeakConfig);
             VoiceServer.AddTask(new PositionalTask());
             AttachToVoiceServerEvents();

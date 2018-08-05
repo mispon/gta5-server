@@ -59,9 +59,6 @@
     <Reference Include="GrandTheftMultiplayer.Shared, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\grandtheftmultiplayer.api.0.1.798.595\lib\net452\GrandTheftMultiplayer.Shared.dll</HintPath>
     </Reference>
-    <Reference Include="gta-mp-data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\gta-mp-data.1.0.3\lib\gta-mp-data.dll</HintPath>
-    </Reference>
     <Reference Include="JustAnotherVoiceChat.Server.GTMP, Version=0.3.4.238, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\JustAnotherVoiceChat.Server.GTMP.0.3.4.238\lib\net452\JustAnotherVoiceChat.Server.GTMP.dll</HintPath>
     </Reference>
@@ -470,6 +467,10 @@
     <ProjectReference Include="..\gt-mp-database\gta-mp-database.csproj">
       <Project>{25AE7701-B0D2-4BEA-BD21-EABE788F0E81}</Project>
       <Name>gta-mp-database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\gta-mp-data\gta-mp-data.csproj">
+      <Project>{06555E87-40A2-4135-A1A7-82541F42809E}</Project>
+      <Name>gta-mp-data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
