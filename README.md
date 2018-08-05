@@ -8,17 +8,16 @@ All events that exist on the server are declared in two classes: ServerEvent.cs 
 In the ui folder you will find the interface, speedometer, authorization and character customization windows. They are made on pure html + js + css, there everything is very badly written, so I advise
 The user interface is immediately done using Webpack and less / sass. If you try, you can easily do it on React.
 
-DATABASE
+GT-MP-DATABASE
 ------------
 
 This is a wrapper over a database that is based on linq2db. I used sql server, for me it was very convenient. The structure of the tables I saved and zakomitil in the root directory gta-mp-server.bak.
 You will simply need to install Sql Management Studio, deploy the backup of this file and in ConnectionSettings.cs specify your data for the connection.
 
-TRANSPORT TYPES
+GTA-MP-DATA
 ------------
 
-This is the general data for the database, server and site. I collected them as a local nuget-package. This was convenient, since I was working on the server and the site at the same time. But you can not be bothered and just create
-direct link to this package wherever required.
+This is the general data for the database, server and site. I collected them as a local nuget-package. This was convenient, since I was working on the server and the site at the same time. But now I've change using on direct link.
 
 SERVER
 ------------
